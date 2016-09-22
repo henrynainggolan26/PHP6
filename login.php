@@ -1,6 +1,6 @@
 <?php
 if(!session_id()){
-	session_start();
+	include_once 'start_session.php';
 }
 include_once(dirname(__FILE__) . '/db.php');
 $con = new DB_con();

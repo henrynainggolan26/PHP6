@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include_once 'start_session.php';
 //set session when logout 
 if($_SESSION['username'] == ""){
 	header('Location: login.php');

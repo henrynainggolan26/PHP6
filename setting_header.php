@@ -1,7 +1,8 @@
 <?php
-include_once('header.php');
+include_once 'start_session.php';
+include_once 'header.php';
 include_once 'db.php';
-session_start();
+
 //set session when logout 
 if($_SESSION['username'] == ""){
 	header('Location: login.php');

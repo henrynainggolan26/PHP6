@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once 'start_session.php';
 include_once 'db.php';
 include_once 'header_frontend.php';
 $con = new DB_con();
@@ -22,8 +22,8 @@ $mail->Password = 'henry1234';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('henry@softwareseni.com', 'Henry N');
-$mail->addAddress('henrylumbanraja26@gmail.com', 'Henry');     // Add a recipient
+$mail->setFrom('henrylumbanraja26@gmail.com', 'Henry N');
+$mail->addAddress('henry@softwareseni.com', 'Henry');     // Add a recipient
 //$mail->addAddress('henry.lumra@gmail.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');

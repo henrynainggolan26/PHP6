@@ -1,7 +1,8 @@
 <?php
-session_start();
+include_once 'start_session.php';
 include_once 'db.php';
 include_once 'header_frontend.php';
+
 $count_sidebar = isset($_SESSION['count_sidebar']) ? $_SESSION['count_sidebar'] : null; 
 $con = new DB_con();
 $sql = $con->select_title();

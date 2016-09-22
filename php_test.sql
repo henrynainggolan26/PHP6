@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 20, 2016 at 05:59 PM
+-- Generation Time: Sep 22, 2016 at 01:09 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.19
 
@@ -23,6 +23,57 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comments`
+--
+
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `comment` text NOT NULL,
+  `reply` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `name`, `email`, `time`, `comment`, `reply`) VALUES
+(1, 'henry', 'henry@ss.com', '2016-09-21 10:15:10', 'wiswsbuw dwdhwudhw dwudwhduhwshuws', 'ccccccc'),
+(2, 'zz', 'xxxxxx@aaa', '2016-09-21 10:15:04', 'asasa dwdwdwd', 'bbbbb'),
+(3, 'ae', 'ae@ae', '2016-09-21 08:58:24', 'drrsaaaaa', 'kkkksaa'),
+(4, 'zz', 'xxxxxx@dsds', '2016-09-21 10:15:20', 'bdsdfggs', 'eeeee');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE IF NOT EXISTS `contact_us` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`id`, `name`, `email`, `message`) VALUES
+(1, 'henry', 'henry.lumra@gmail.com', 'Test mail last'),
+(2, 'henry', 'henry.lumra@gmail.com', 'Test mail last'),
+(3, 'henry', 'henry.lumra@gmail.com', 'Test mail last'),
+(4, 'henry', 'henry.lumra@gmail.com', 'Test mail last'),
+(5, 'henry', 'henry.lumra@gmail.com', 'cccccccccc');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `posts`
 --
 
@@ -34,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `create_at` datetime NOT NULL,
   `update_at` datetime NOT NULL,
   PRIMARY KEY (`id_post`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `posts`
